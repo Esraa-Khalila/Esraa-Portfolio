@@ -1,0 +1,149 @@
+
+a.navbar-brand {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+  }
+  
+  /* Provide sufficient contrast against white background */
+  a {
+    color: #0366d6;
+  }
+  
+  .btn-primary {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+  }
+  
+  .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+    
+  }
+  span {
+      color: #fc03e8;
+  }
+  
+  ul li  {
+      cursor: pointer;
+  }
+  .bg{
+       background-image: url(./Images/1.jpg);
+      background-size:cover;
+    height:670px;
+     display:flex;
+     justify-content:center;
+      align-items:center ;
+      
+  }
+  /*-----About-----*/
+  .bg h2{
+     font-size:45px;
+  }
+  
+  
+  .About p{
+      font-size:20px;
+  }
+  @media (max-width:400px){
+      .bg h2 {
+          font-size: 30px;
+      }
+      }
+  
+  /*-----Experince-----*/
+  .Exp img{
+      transition: transform 0.5s;
+     
+  }
+  .Exp img:hover{
+   transform: scale(1.1) translateY(10px);
+  }
+  /*-----My Project-----*/
+  .myPro {
+      background: linear-gradient( to bottom, #E5C8FE 0%, #9536A1 38%, #B8ACE7 58%, #CC57B2 80%, #CC57B2 88%, #E5C8FE 100% );
+      height: 800px;
+  }
+      .myPro img {
+          transition: transform 0.5s;
+         
+      }
+      .myPro img:hover{
+          transform:scale(1.1) translateY(10px);
+      }
+      .card-title{
+          font-size:23px;
+      }
+      .myPro a{
+          text-decoration: none;
+          color: #e5e5e5 ;
+          
+      }
+  
+  
+  
+  .social img {
+      transition: transform 0.5s;
+    
+  
+  }
+  
+  .social img:hover{
+      transform:scale(1.1) translateY(10px)
+  }
+
+  
+  /* Sticky footer styles
+  -------------------------------------------------- */
+  html {
+      font-size: 14px;
+  }
+  @media (min-width: 768px) {
+    html {
+      font-size: 16px;
+    }
+  }
+  
+  .border-top {
+    border-top: 1px solid #e5e5e5;
+  }
+  .border-bottom {
+    border-bottom: 1px solid #e5e5e5;
+  }
+  
+  .box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+  }
+  
+  button.accept-policy {
+    font-size: 1rem;
+    line-height: inherit;
+  }
+  
+  
+  
+  
+  /* Sticky footer styles
+  -------------------------------------------------- */
+  html {
+    position: relative;
+    min-height: 100%;
+  }
+  
+  body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+  }
+  .footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 30px; /* Vertically center the text there */
+  }
+  hr{
+     font-weight:500
+  }
+  

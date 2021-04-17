@@ -1,0 +1,192 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+@* ----Header--- *@
+<div class="bg">
+
+    <div class=" d-flex text-white font-weight-bold ">
+        <h2 class="">I'm </h2>
+        <h2 class="pl-2 " id="typing"></h2>
+    </div>
+</div>
+<br />
+<br />
+
+@* ------About Me---- *@
+
+<div id="Move">
+    <div class="container">
+        <div class="row m-4">
+            <div class="About">
+                <center>
+                    <h1 class="p-4 mb-3">About Me </h1>
+                    <p>
+                        Graduated form  university Of Jordan with a B.S. in foreign language, then realized I Can't move on coding.
+                    </p>
+                    <p>
+
+                        I worked as English teatcher for about a year after graduating, but wasn't too fond of it. I started spending every second of my free time learning to code
+                        and after about 4 months I think I'm ready to land my first job!
+                    </p>
+                </center>
+            </div>
+        </div>
+        <br /><br />
+        <hr />
+
+        <br />
+    </div>
+
+</div>
+
+
+
+@* ------Experience------- *@
+<div id="Exp">
+    <div class="container">
+        <div class="Exp mt-4 mb-4">
+            <center>
+                <h1 class="pb-4">Experience With </h1>
+                <div class="row justify-content-center mt-4">
+                    <img src="~/Images/jq.png" height="170" class="m-4" />
+                    <img src="~/Images/Boot.png" height="170" class="m-4" />
+
+                    <img src="~/Images/sql.png" height="170" class="m-4" />
+                    <img src="~/Images/js.png" height="170" class="m-4" />
+                    <img src="~/Images/html.png" height="170" class="m-4" />
+                    <img src="~/Images/css.png" height="170" class="m-4" />
+
+                    <img src="~/Images/net.png" height="170" class="m-4" />
+                    <img src="/Images/3.png" height="170" class="m-4" />
+
+                </div>
+            </center>
+        </div>
+        <br /><br />
+
+    </div>
+</div>
+
+
+
+@* ------Project----- *@
+<div id="Pro">
+    <div class="myPro">
+        <div class="container">
+            <center>
+                <br /><br />
+                <h2 class=" font-weight-bold pt-2 pb-4">My Project</h2>
+                <br /><br />
+                <div class="row ">
+                    <div class="col-lg-6 mt-4">
+
+                        <div class=" text-center">
+                            <img src="~/Images/Project1.png" class="col-12" />
+                        </div>
+                    </div>
+                </div>
+
+
+            </center>
+        </div>
+
+    </div>
+    <br /><br />
+</div>
+
+@* -----Contact----- *@
+<div id="Con">
+
+    <div class="container">
+        <center>
+            <h2 class="font-weight-bold m-4">Contact me</h2>
+            <p>Here are diffrent ways to contact me, I'm availabe most of the time, just go ahead!</p>
+            <div class="social">
+                <div class="row justify-content-center mt-4">
+
+                    <a href="https://www.facebook.com/profile.php?id=100002757556955"><img src="~/Images/faceb.png" height="100" /></a>
+                    <a href="https://www.github.com"><img src="~/Images/githu.png" height="100" /></a>
+                    <a href="https://www.linkedin"><img src="~/Images/Lin.png" height="100" /></a>
+                    <a href="https://www.yahoo.com"><img src="~/Images/yahooo.png" height="100" /></a>
+
+                </div>
+            </div>
+            <div class="mt-4">
+                <h3> Phone: (+962) 786475978</h3>
+                <h3> Email: esraakh.1996@yahoo.com</h3>
+            </div>
+            <br /><br />
+        </center>
+    </div>
+</div>
+
+
+
+
+<script>
+    const textdis = document.getElementById('typing')
+    const ph = ["Esraa AlKalilah", "Full-stack developer"]
+    let i = 0
+    let j = 0
+    let currph = []
+    let isDeleting = false
+    function loop() {
+        textdis.innerHTML = currph.join("")
+        if (i < ph.length) {
+
+            if (j <= ph[i].length) {
+
+            }
+            if (!isDeleting && j <= ph[i].length) {
+                currph.push(ph[i][j])
+                j++
+
+            }
+
+            if (isDeleting && j <= ph[i].length) {
+                currph.pop(ph[i][j])
+                j--
+
+            }
+            if (j == ph[i].length) {
+                isDeleting = true
+            }
+            if (isDeleting && j === 0) {
+                currph = []
+                isDeleting = false
+                i++
+            }
+            if (i == ph.length) {
+                i = 0;
+            }
+        }
+        setTimeout(loop, 100)
+    }
+
+    loop()
+</script>
+<script>
+    function About() {
+        const Move= document.getElementById("Move");
+        Move.scrollIntoView({ behavior: 'smooth' });
+    }
+  
+    function Experience() {
+        const Exp = document.getElementById("Exp");
+        Exp.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function Project() {
+        const Exp = document.getElementById("Pro");
+        Exp.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function Contact() {
+        const Exp = document.getElementById("Con"); 
+        Exp.scrollIntoView({ behavior: 'smooth' });
+        
+    }
+    
+</script>
